@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+                width: 35%;
+                height: 350px;
+                background-color: white;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                padding: 10px;
+                margin-top: 14%;
+                margin-left: 10px;
+                display: flex;
+        }
+        .addcargo{
+            padding: 20px;
+        }
+        .addcargo input{
+            padding: 10px;
+            margin: auto;
+            margin-top: 10px;
+        }
+        .addbtn{
+            background-color: greenyellow;
+            color: black;
+        }
+        .addcargo h3{
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+             <div>
+                   <form action="/add-Cargo" method="post" class="addcargo">
+                    <h3><B><I>ADD CARGO</I></B></h3>
+                    <input type="text" placeholder="Total Containers" name="container">
+                     <input type="text" placeholder="current Address" name="address">
+                      <input type="text" placeholder="Mobile number" name="mobile">
+                       <input type="text" placeholder="Air number" name="airNumber">
+                       <input type="submit" value="Add" class="addbtn">
+                </form>
+             </div>
+    </div>
+
+    
+</body>
+</html>
