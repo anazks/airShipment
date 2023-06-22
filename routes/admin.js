@@ -122,7 +122,7 @@ router.post('/addpay',async(req,res)=>{
     })
     router.get('/bookingReport',async(req,res)=>{
                 try {
-                        let booking = await bookingModel.find();
+                        let booking = await cargoModel.find();
                         const doc = new PDFDocument();
                         doc.fontSize(16)
                         .text('Booking Report', { align: 'center' })
@@ -133,10 +133,10 @@ router.post('/addpay',async(req,res)=>{
                                 //    .text(item.tickets, { underline: true })
                                    .moveDown()
                                    .fontSize(12)
-                                   .text(`Tickets: ${item.tickets}`)
-                                   .text(`userID: ${item.userId}`)
+                                   .text(`Container: ${item.container}`)
+                                   .text(`mobile: ${item.mobile}`)
                                    .text(`payment: ${item.payment}`)
-                                   .text(`employee: ${item.employee}`)
+                                   .text(`employee: ${item.Dboy}`)
                                    .moveDown();
                               });
                               doc.pipe(fs.createWriteStream('Bookingreport.pdf'));
@@ -183,7 +183,7 @@ router.post('/addpay',async(req,res)=>{
 })
 router.get('/empReport', async(req,res)=>{
         try {
-                let users = await userModel.find();
+                let users = await employeeModel.find();
                 const doc = new PDFDocument();
                 doc.fontSize(16)
                 .text('employee Report', { align: 'center' })
